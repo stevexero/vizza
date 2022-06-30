@@ -1,0 +1,28 @@
+.Introduction {
+  max-width: 1100px;
+  padding: 7rem 5rem;
+  background: whitesmoke;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.Introduction .Introduction-right .Introduction-photo {
+  width: 260px;
+  height: 260px;
+  padding: 0.75rem;
+  border-radius: 50%;
+  border: 1px solid #70809066;
+}
+
+.sticky {
+  margin-top: 5.1rem;
+}
+/*# sourceMappingURL=Introduction.css.map */

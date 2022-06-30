@@ -1,0 +1,26 @@
+.Introduction {
+  max-width: 1100px;
+  padding: 7rem 5rem;
+  background: whitesmoke;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  // .Introduction-left {
+
+  // }
+
+  .Introduction-right {
+    .Introduction-photo {
+      width: 260px;
+      height: 260px;
+      padding: 0.75rem;
+      border-radius: 50%;
+      border: 1px solid #70809066;
+    }
+  }
+}
+
+.sticky {
+  margin-top: 5.1rem;
+}

@@ -1,0 +1,18 @@
+.Navbar {
+  width: 1100px;
+  padding: 2rem 5rem;
+  background: #eeeeee;
+
+  .Navbar-container {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+.sticky-nav {
+  position: fixed;
+  top: 0;
+}

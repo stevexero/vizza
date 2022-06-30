@@ -1,0 +1,67 @@
+.Impact {
+  max-width: 1100px;
+  padding: 7rem 5rem;
+  background: whitesmoke;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.Impact .Impact-subheading {
+  max-width: 500px;
+}
+
+.Impact .Impact-stats {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.Impact .Impact-stats .Impact-item {
+  width: 205px;
+  height: 205px;
+  padding: 1rem;
+}
+
+.Impact .Impact-stats .Impact-item:first-child {
+  background-color: #efa8b0;
+  border-radius: 5px 0 0 5px;
+}
+
+.Impact .Impact-stats .Impact-item:nth-child(2) {
+  background-color: #c79cc8;
+}
+
+.Impact .Impact-stats .Impact-item:nth-child(3) {
+  background-color: #a89cc8;
+}
+
+.Impact .Impact-stats .Impact-item:nth-child(4) {
+  background-color: #9bb2e1;
+}
+
+.Impact .Impact-stats .Impact-item:last-child {
+  background-color: #8cc9f0;
+  border-radius: 0 5px 5px 0;
+}
+/*# sourceMappingURL=Impact.css.map */

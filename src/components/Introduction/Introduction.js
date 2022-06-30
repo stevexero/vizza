@@ -20,7 +20,9 @@ const Introduction = () => {
   };
 
   return (
-    <div className={`Introduction radius-bottom mb-4 ${stickyClass}`}>
+    <div
+      id='introduction'
+      className={`Introduction radius-bottom mb-4 ${stickyClass}`}>
       <div className='Introduction-left mr-4'>
         <h2 className='med-heading'>Not your average vegan delight</h2>
         <div className='rule mt-2'></div>

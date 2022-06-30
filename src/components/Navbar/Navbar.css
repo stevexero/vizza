@@ -1,6 +1,6 @@
 .Navbar {
   width: 1100px;
-  padding: 2rem 5rem;
+  padding: 1rem 5rem;
   background: #eeeeee;
 }
 
@@ -19,6 +19,18 @@
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+}
+
+.Navbar .Navbar-container .Navbar-item {
+  padding: 1rem 2rem;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.Navbar .Navbar-container .active {
+  background: whitesmoke;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
 }
 
 .sticky-nav {

@@ -6,7 +6,7 @@ import './Ingredients.css';
 
 const Ingredients = () => {
   return (
-    <div className='Ingredients radius mb-4'>
+    <div id='ingredients' className='Ingredients radius mb-4'>
       <div className='Ingredients-top'>
         <h2 className='med-heading'>Real ingredients, real delicious</h2>
         <div className='rule mt-2'></div>

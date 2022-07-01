@@ -54,7 +54,15 @@ const Navbar = () => {
           duration={250}>
           <li className='Navbar-item'>Impact</li>
         </ScrollTo>
-        <li className='Navbar-item'>Menu</li>
+        <ScrollTo
+          to='menu'
+          activeClass='active'
+          spy={true}
+          smooth={true}
+          offset={-70}
+          duration={250}>
+          <li className='Navbar-item'>Menu</li>
+        </ScrollTo>
         <li className='Navbar-item'>Order Now</li>
       </ul>
     </nav>

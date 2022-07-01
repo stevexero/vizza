@@ -3,6 +3,7 @@ import Hero from '../../components/Hero/Hero';
 import Impact from '../../components/Impact/Impact';
 import Ingredients from '../../components/Ingredients/Ingredients';
 import Introduction from '../../components/Introduction/Introduction';
+import Menu from '../../components/Menu/Menu';
 import Navbar from '../../components/Navbar/Navbar';
 
 // Styles
@@ -16,6 +17,7 @@ const Home = () => {
       <Introduction />
       <Ingredients />
       <Impact />
+      <Menu />
     </div>
   );
 };

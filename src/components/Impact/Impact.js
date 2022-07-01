@@ -8,7 +8,7 @@ import './Impact.css';
 
 const Impact = () => {
   return (
-    <div id='impact' className='Impact mb-4'>
+    <div id='impact' className='Impact radius mb-4'>
       <h2 className='med-heading'>
         Friendly to the environment AND the dinner table!
       </h2>

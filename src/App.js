@@ -1,6 +1,7 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { Parallax } from 'react-parallax';
 
+// eslint-disable-next-line no-unused-vars
 import firebase from './FirebaseConfig';
 
 import Home from './pages/Home/Home';

@@ -1,0 +1,12 @@
+.Topbar {
+  width: 100%;
+  max-width: 1100px;
+  position: absolute;
+  top: 0;
+
+  .login-icon {
+    position: absolute;
+    right: 0;
+    cursor: pointer;
+  }
+}

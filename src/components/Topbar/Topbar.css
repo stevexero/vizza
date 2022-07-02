@@ -1,0 +1,13 @@
+.Topbar {
+  width: 100%;
+  max-width: 1100px;
+  position: absolute;
+  top: 0;
+}
+
+.Topbar .login-icon {
+  position: absolute;
+  right: 0;
+  cursor: pointer;
+}
+/*# sourceMappingURL=Topbar.css.map */

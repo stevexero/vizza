@@ -5,12 +5,14 @@ import Ingredients from '../../components/Ingredients/Ingredients';
 import Introduction from '../../components/Introduction/Introduction';
 import Menu from '../../components/Menu/Menu';
 import Navbar from '../../components/Navbar/Navbar';
+import Topbar from '../../components/Topbar/Topbar';
 
 import './Home.css';
 
 const Home = () => {
   return (
     <div className='Home'>
+      <Topbar />
       <Hero />
       <Navbar />
       <Introduction />

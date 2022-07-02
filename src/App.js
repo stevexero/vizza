@@ -1,8 +1,8 @@
+import { useEffect, useState } from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { Parallax } from 'react-parallax';
 
-// eslint-disable-next-line no-unused-vars
-import firebase from './FirebaseConfig';
+import FirebaseAuthService from './FirebaseAuthService';
 
 import Home from './pages/Home/Home';
 import Admin from './pages/Admin/Admin';
@@ -10,6 +10,16 @@ import Admin from './pages/Admin/Admin';
 import BgPhoto from './assets/pizzasign.jpg';
 
 function App() {
+  const [user, setUser] = useState(null);
+
+  FirebaseAuthService.subscribeToAuthChanges(setUser);
+
+  useEffect(() => {
+    if (user) {
+      console.log(user);
+    }
+  }, [user]);
+
   return (
     <BrowserRouter>
       <Parallax bgImage={BgPhoto} bgImageAlt='bg' strength={1000}>

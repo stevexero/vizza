@@ -1,0 +1,42 @@
+.Footer {
+  width: 100%;
+  max-width: 1100px;
+}
+
+.Footer .Footer-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.Footer .Footer-container .Footer-left .Footer-map {
+  max-width: 550px;
+}
+
+.Footer .Footer-container .Footer-right .Footer-details {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.Footer .Footer-container .Footer-right .Footer-social .social-item {
+  cursor: pointer;
+}
+/*# sourceMappingURL=Footer.css.map */

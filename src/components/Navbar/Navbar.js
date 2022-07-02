@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
-// import { Link as ScrollTo, animateScroll as scroll } from 'react-scroll';
 import { Link as ScrollTo } from 'react-scroll';
+import { BsBag } from 'react-icons/bs';
 
 import './Navbar.css';
 
@@ -18,10 +18,6 @@ const Navbar = () => {
       windowHeight > 476 ? setStickyClass('sticky-nav') : setStickyClass('');
     }
   };
-
-  //   const scrollToTop = () => {
-  //     scroll.scrollToTop();
-  //   };
 
   return (
     <nav
@@ -63,7 +59,9 @@ const Navbar = () => {
           duration={250}>
           <li className='Navbar-item'>Menu</li>
         </ScrollTo>
-        <li className='Navbar-item'>Order Now</li>
+        <li className='Navbar-item'>
+          <BsBag /> 0
+        </li>
       </ul>
     </nav>
   );

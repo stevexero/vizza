@@ -196,3 +196,33 @@ li {
 .radius-bottom {
   border-radius: 0 0 5px 5px;
 }
+
+/* ==================================================================================== */
+/* INPUTS */
+/* ==================================================================================== */
+.text-input {
+  padding: 1.25rem 1rem;
+  border: none;
+  border-radius: 5px;
+  background-color: whitesmoke;
+}
+
+.text-input:focus {
+  outline: 1px solid dodgerblue;
+}
+
+/* ==================================================================================== */
+/* MODAL */
+/* ==================================================================================== */
+.Modal-top-bar {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.forgot-password-link {
+  text-align: center;
+  text-decoration: underline;
+  color: dodgerblue;
+  cursor: pointer;
+}

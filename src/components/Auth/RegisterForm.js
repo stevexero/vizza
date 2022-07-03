@@ -1,15 +1,16 @@
 import { useState } from 'react';
 import FirebaseAuthService from '../../FirebaseAuthService';
 
-import './LoginForm.css';
+import './RegisterForm.css';
 
-const LoginForm = ({ killModal, resetPassword }) => {
+const RegisterForm = ({ killModal }) => {
   const [formData, setFormData] = useState({
     email: '',
     password: '',
+    password2: '',
   });
 
-  const { email, password } = formData;
+  const { email, password, password2 } = formData;
 
   const onChange = (e) => {
     setFormData((prevState) => ({
@@ -21,16 +22,20 @@ const LoginForm = ({ killModal, resetPassword }) => {
   const onSubmit = async (e) => {
     e.preventDefault();
 
-    try {
-      await FirebaseAuthService.loginUser(email, password);
-      killModal();
-    } catch (error) {
-      console.log(error);
+    if (password !== password2) {
+      console.log('Passwords do not match');
+    } else {
+      try {
+        await FirebaseAuthService.registerUser(email, password);
+        killModal();
+      } catch (error) {
+        console.log(error);
+      }
     }
   };
 
   return (
-    <div className='LoginForm mt-1'>
+    <div className='RegisterForm mt-1'>
       <form onSubmit={onSubmit}>
         <label htmlFor='email' className='mt-1'>
           Email
@@ -58,16 +63,24 @@ const LoginForm = ({ killModal, resetPassword }) => {
           required
           className='text-input mt-1'
         />
-        <button type='submit' className='button button-white-smoke mt-3'>
-          Login
+        <label htmlFor='password2' className='mt-2'>
+          Password
+        </label>
+        <input
+          type='password'
+          id='password2'
+          name='password2'
+          value={password2}
+          onChange={onChange}
+          placeholder='Confirm password'
+          required
+          className='text-input mt-1'
+        />
+        <button type='submit' className='button button-white-smoke mt-3 mb-1'>
+          Register
         </button>
       </form>
-      <div
-        onClick={() => resetPassword()}
-        className='forgot-password-link mt-3 mb-1'>
-        Forgot password?
-      </div>
     </div>
   );
 };
-export default LoginForm;
+export default RegisterForm;

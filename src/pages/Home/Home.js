@@ -9,10 +9,10 @@ import Topbar from '../../components/Topbar/Topbar';
 
 import './Home.css';
 
-const Home = () => {
+const Home = ({ existingUser }) => {
   return (
     <div className='Home'>
-      <Topbar />
+      <Topbar existingUser={existingUser} />
       <Hero />
       <Navbar />
       <Introduction />

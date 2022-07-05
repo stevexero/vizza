@@ -1,5 +1,7 @@
 import { useState } from 'react';
 
+import FirebaseAuthService from '../../FirebaseAuthService';
+
 import './ForgotPasswordForm.css';
 
 const ForgotPasswordForm = () => {
@@ -9,8 +11,21 @@ const ForgotPasswordForm = () => {
     setEmail(e.target.value);
   };
 
-  const onSubmit = (e) => {
+  const onSubmit = async (e) => {
     e.preventDefault();
+
+    if (!email) {
+      console.log('no email');
+      //   Handle message
+      return;
+    }
+
+    try {
+      await FirebaseAuthService.sendPasswordResetEmail(email);
+      //   Handle message
+    } catch (error) {
+      console.log(error);
+    }
   };
 
   return (

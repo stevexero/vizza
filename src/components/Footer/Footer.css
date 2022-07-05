@@ -39,4 +39,27 @@
 .Footer .Footer-container .Footer-right .Footer-social .social-item {
   cursor: pointer;
 }
+
+.Footer .admin {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.Footer .admin a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-decoration: none;
+}
 /*# sourceMappingURL=Footer.css.map */

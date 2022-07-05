@@ -14,7 +14,7 @@ import Map from '../../assets/map.png';
 
 import './Footer.css';
 
-const Footer = () => {
+const Footer = ({ existingUser, isAdmin }) => {
   return (
     <div className='Footer mb-4'>
       <div className='Footer-container'>
@@ -68,11 +68,14 @@ const Footer = () => {
           steve.cx
         </a>
       </div>
-      <div className='admin mt-4 text-center'>
-        <Link to='/admin' className='text-white-smoke'>
-          <RiAdminLine />
-        </Link>
-      </div>
+      {existingUser && isAdmin && (
+        <div className='admin mt-4'>
+          <Link to='/admin' className='text-white-smoke'>
+            <RiAdminLine size='1.5rem' />
+            &nbsp;&nbsp;Admin Panel
+          </Link>
+        </div>
+      )}
     </div>
   );
 };

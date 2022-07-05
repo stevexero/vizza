@@ -1,1 +1,10 @@
+.Admin {
+  .add-menu-item {
+    max-width: 300px;
 
+    form {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+}

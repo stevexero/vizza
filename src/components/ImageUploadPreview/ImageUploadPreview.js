@@ -3,6 +3,8 @@ import { v4 as uuidv4 } from 'uuid';
 
 import FirebaseStorageService from '../../FirebaseStorageService';
 
+import './ImageUploadPreview.css';
+
 const ImageUploadPreview = ({
   basePath,
   existingImageUrl,
@@ -64,7 +66,7 @@ const ImageUploadPreview = ({
   };
 
   return (
-    <div>
+    <div className='ImageUploadPreview'>
       <input
         type='file'
         accept='image/*'
@@ -83,9 +85,16 @@ const ImageUploadPreview = ({
       ) : null}
 
       {imageUrl ? (
-        <div>
-          <img src={imageUrl} alt={imageUrl} />
-          <button type='button' onClick={handleCancelImageClick}>
+        <div className='ImageUploadPreview-image-container'>
+          <img
+            src={imageUrl}
+            alt={imageUrl}
+            className='ImageUploadPreview-image mt-2'
+          />
+          <button
+            type='button'
+            onClick={handleCancelImageClick}
+            className='mt-2'>
             Cancel image upload
           </button>
         </div>

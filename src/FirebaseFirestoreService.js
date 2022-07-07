@@ -4,12 +4,12 @@ import {
   doc,
   getDoc,
   collection as firestoreCollection,
+  getDocs,
   //   query,
   //   where,
   //   orderBy,
   //   limit,
   //   startAfter,
-  //   getDocs,
   //   updateDoc,
   //   deleteDoc,
 } from 'firebase/firestore';
@@ -23,17 +23,30 @@ const readAdminUids = async () => {
   return docSnap.data().userUid;
 };
 
+const readCollection = async (collectionName) => {
+  const querySnapshot = await getDocs(firestoreCollection(db, collectionName));
+  //   querySnapshot.forEach((doc) => {
+  //     // doc.data() is never undefined for query doc snapshots
+  //     return doc.data();
+  //   });
+  return querySnapshot;
+};
+
 const createDocument = (collection, document) => {
-  //   return db.collection(collection).add(document);
   return addDoc(firestoreCollection(db, collection), document);
 };
 
-const readDocument = (collection, id) => {
-  return getDoc(doc(firestoreCollection(db, collection), id));
+const readDocument = async (collection, id) => {
+  const docRef = doc(db, collection, id);
+  const docSnap = await getDoc(docRef);
+
+  //   return getDoc(doc(firestoreCollection(db, collection), id));
+  return docSnap;
 };
 
 const FirebaseFirestoreService = {
   readAdminUids,
+  readCollection,
   createDocument,
   readDocument,
 };

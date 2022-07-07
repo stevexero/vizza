@@ -11,6 +11,7 @@ import NotFound from './pages/NotFound/NotFound';
 function App() {
   const [user, setUser] = useState(null);
   const [isAdmin, setIsAdmin] = useState(false);
+  const [menuItems, setMenuItems] = useState([]);
 
   FirebaseAuthService.subscribeToAuthChanges(setUser);
 
@@ -30,6 +31,22 @@ function App() {
     }
   }, [user]);
 
+  const fetchMenuItems = async () => {
+    try {
+      const temp = [];
+
+      const res = await FirebaseFirestoreService.readCollection('menuitems');
+
+      res.forEach((doc) => {
+        temp.push(doc.data());
+      });
+
+      setMenuItems(temp);
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
   const handleAddMenuItem = async (newMenuItem) => {
     try {
       const res = await FirebaseFirestoreService.createDocument(
@@ -45,6 +62,7 @@ function App() {
 
   useEffect(() => {
     fetchAdminUids();
+    fetchMenuItems();
   }, [user, fetchAdminUids]);
 
   return (
@@ -60,7 +78,11 @@ function App() {
             path='/admin'
             element={
               isAdmin ? (
-                <Admin handleAddMenuItem={handleAddMenuItem} />
+                <Admin
+                  handleAddMenuItem={handleAddMenuItem}
+                  fetchMenuItems={fetchMenuItems}
+                  menuItems={menuItems}
+                />
               ) : (
                 <Home />
               )

@@ -1,0 +1,79 @@
+.AdminSidebar {
+  width: 300px;
+  height: 100vh;
+  background: slateblue;
+  position: relative;
+
+  .AdminSidebar-title-no-collapse {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border-bottom: 1px solid lightslategray;
+    cursor: pointer;
+  }
+
+  .Collapsible {
+    .Collapsible__trigger {
+      display: block;
+      cursor: pointer;
+      position: relative;
+      border-bottom: 1px solid lightslategray;
+      padding: 1rem;
+
+      &:after {
+        font-family: 'FontAwesome';
+        content: '\f107';
+        position: absolute;
+        right: 1rem;
+        top: 1.5rem;
+        display: block;
+        transform: rotateZ(-90deg);
+        transition: transform 100ms;
+      }
+
+      &.is-open {
+        &:after {
+          transform: rotateZ(0deg);
+        }
+      }
+    }
+
+    .AdminSidebar-title {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+    }
+
+    .AdminSidebar-item {
+      cursor: pointer;
+      position: relative;
+
+      svg {
+        position: absolute;
+        right: 1rem;
+        top: 1.2rem;
+        display: block;
+      }
+    }
+  }
+
+  //   Work on this later
+  //   .AdminSidebar-bottom {
+  //     width: 100%;
+  //     display: block;
+  //     position: absolute;
+  //     bottom: 0;
+  //     cursor: pointer;
+
+  //     &:after {
+  //       font-family: 'FontAwesome';
+  //       content: '\2b';
+  //       position: absolute;
+  //       right: 1rem;
+  //       top: 1rem;
+  //       display: block;
+  //       transform: rotateZ(-90deg);
+  //       transition: transform 100ms;
+  //     }
+  //   }
+}

@@ -1,0 +1,12 @@
+.ImageUploadPreview {
+  max-width: 100%;
+}
+
+.ImageUploadPreview .ImageUploadPreview-image-container {
+  max-width: 300px;
+}
+
+.ImageUploadPreview .ImageUploadPreview-image-container .ImageUploadPreview-image {
+  max-width: 100%;
+}
+/*# sourceMappingURL=ImageUploadPreview.css.map */

@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 
 import { ValidPrice } from '../../utils/regex';
 
@@ -33,10 +33,6 @@ const AddEditMenuItem = ({ handleAddMenuItem }) => {
 
     handleAddMenuItem(newMenuItem);
   };
-
-  useEffect(() => {
-    console.log(category);
-  }, [category]);
 
   return (
     <form onSubmit={handleMenuItemSubmit}>

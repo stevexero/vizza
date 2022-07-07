@@ -1,0 +1,56 @@
+.AdminMenuItems .AdminMenuItems-items-container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+}
+
+.AdminMenuItems .AdminMenuItems-items-container .AdminMenuItems-item {
+  max-width: 500px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+.AdminMenuItems .AdminMenuItems-items-container .AdminMenuItems-item .AdminMenuItems-item-left .AdminMenuItems-item-image {
+  min-width: 160px;
+  max-width: 160px;
+  min-height: 160px;
+  max-height: 160px;
+  border-radius: 50%;
+  padding: 0.75rem;
+  border: 1px solid #70809066;
+}
+
+.AdminMenuItems .AdminMenuItems-items-container .AdminMenuItems-item .AdminMenuItems-item-right .AdminMenuItems-item-description {
+  line-height: 1.4rem;
+}
+
+.AdminMenuItems .AdminMenuItems-items-container .AdminMenuItems-item .AdminMenuItems-item-right .AdminMenuItems-pricing {
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+/*# sourceMappingURL=AdminMenuItems.css.map */

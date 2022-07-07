@@ -1,4 +1,7 @@
 .Admin {
+  display: flex;
+  flex-direction: row;
+
   .add-menu-item {
     max-width: 300px;
 

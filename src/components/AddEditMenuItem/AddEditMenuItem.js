@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 import { ValidPrice } from '../../utils/regex';
 
@@ -11,6 +11,7 @@ const AddEditMenuItem = ({ handleAddMenuItem }) => {
   const [price, setPrice] = useState('');
   const [priceError, setPriceError] = useState(false);
   const [imageUrl, setImageUrl] = useState('');
+  const [textLength, setTextLength] = useState(0);
 
   const validatePrice = () => {
     if (!ValidPrice.test(price)) {
@@ -31,8 +32,23 @@ const AddEditMenuItem = ({ handleAddMenuItem }) => {
       imageUrl,
     };
 
-    handleAddMenuItem(newMenuItem);
+    if (textLength > 255) {
+      console.log('text is too long');
+    } else {
+      handleAddMenuItem(newMenuItem);
+
+      setCategory('salads');
+      setTitle('');
+      setDescription('');
+      setPrice('');
+      setImageUrl('');
+      setTextLength(0);
+    }
   };
+
+  useEffect(() => {
+    setTextLength(description.length);
+  }, [description, textLength]);
 
   return (
     <form onSubmit={handleMenuItemSubmit}>
@@ -65,6 +81,11 @@ const AddEditMenuItem = ({ handleAddMenuItem }) => {
         required
         value={description}
         onChange={(e) => setDescription(e.target.value)}></textarea>
+      <h6
+        // className='text-slate-grey'
+        style={{ color: textLength > 255 ? 'red' : 'slategray' }}>
+        {255 - textLength} Characters left
+      </h6>
       <label htmlFor='price'>Price</label>
       <input
         type='text'

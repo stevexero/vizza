@@ -1,5 +1,6 @@
 import { useCallback, useEffect, useState } from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { ToastContainer } from 'react-toastify';
 
 import FirebaseAuthService from './FirebaseAuthService';
 import FirebaseFirestoreService from './FirebaseFirestoreService';
@@ -66,31 +67,40 @@ function App() {
   }, [user, fetchAdminUids]);
 
   return (
-    <BrowserRouter>
-      <Routes>
-        <Route path='*' element={<NotFound />} />
-        <Route
-          path='/'
-          element={<Home existingUser={user} isAdmin={isAdmin} />}
-        />
-        {isAdmin && (
+    <>
+      <BrowserRouter>
+        <Routes>
+          <Route path='*' element={<NotFound />} />
           <Route
-            path='/admin'
+            path='/'
             element={
-              isAdmin ? (
-                <Admin
-                  handleAddMenuItem={handleAddMenuItem}
-                  fetchMenuItems={fetchMenuItems}
-                  menuItems={menuItems}
-                />
-              ) : (
-                <Home />
-              )
+              <Home
+                existingUser={user}
+                isAdmin={isAdmin}
+                menuItems={menuItems}
+              />
             }
           />
-        )}
-      </Routes>
-    </BrowserRouter>
+          {isAdmin && (
+            <Route
+              path='/admin'
+              element={
+                isAdmin ? (
+                  <Admin
+                    handleAddMenuItem={handleAddMenuItem}
+                    fetchMenuItems={fetchMenuItems}
+                    menuItems={menuItems}
+                  />
+                ) : (
+                  <Home menuItems={menuItems} />
+                )
+              }
+            />
+          )}
+        </Routes>
+      </BrowserRouter>
+      <ToastContainer />
+    </>
   );
 }
 

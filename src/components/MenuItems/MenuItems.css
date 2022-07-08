@@ -1,0 +1,72 @@
+.Menu-section {
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+}
+
+.Menu-section .Menu-section-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.Menu-section .Menu-items-container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+}
+
+.Menu-section .Menu-items-container .Menu-item {
+  max-width: 500px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.Menu-section .Menu-items-container .Menu-item .Menu-item-left .Menu-image {
+  min-width: 160px;
+  max-width: 160px;
+  min-height: 160px;
+  max-height: 160px;
+  border-radius: 50%;
+  padding: 0.75rem;
+  border: 1px solid #70809066;
+}
+
+.Menu-section .Menu-items-container .Menu-item .Menu-item-right .Menu-item-description {
+  line-height: 1.4rem;
+}
+
+.Menu-section .Menu-items-container .Menu-item .Menu-item-right .Menu-item-price {
+  text-align: right;
+  font-weight: 600;
+}
+
+.Menu-section .BYO-button {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+/*# sourceMappingURL=MenuItems.css.map */

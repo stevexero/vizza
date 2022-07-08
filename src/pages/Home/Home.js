@@ -13,7 +13,7 @@ import BgPhoto from '../../assets/pizzasign.jpg';
 
 import './Home.css';
 
-const Home = ({ existingUser, isAdmin }) => {
+const Home = ({ existingUser, isAdmin, menuItems }) => {
   return (
     <Parallax bgImage={BgPhoto} bgImageAlt='bg' strength={1000}>
       <div className='Home'>
@@ -23,7 +23,7 @@ const Home = ({ existingUser, isAdmin }) => {
         <Introduction />
         <Ingredients />
         <Impact />
-        <Menu />
+        <Menu menuItems={menuItems} />
         <Footer existingUser={existingUser} isAdmin={isAdmin} />
       </div>
     </Parallax>

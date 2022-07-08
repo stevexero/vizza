@@ -66,10 +66,6 @@ const ImageUploadPreview = ({
     handleUploadCancel();
   };
 
-  useEffect(() => {
-    console.log(uploadProgress);
-  }, [uploadProgress]);
-
   return (
     <div className='ImageUploadPreview'>
       {uploadProgress > -1 ||

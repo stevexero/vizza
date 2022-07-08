@@ -1,9 +1,11 @@
 import { useState, useEffect } from 'react';
+import { toast } from 'react-toastify';
 
 import { ValidPrice } from '../../utils/regex';
 
 import ImageUploadPreview from '../ImageUploadPreview/ImageUploadPreview';
 
+import 'react-toastify/dist/ReactToastify.css';
 import './AddEditMenuItem.css';
 
 const AddEditMenuItem = ({ handleAddMenuItem }) => {
@@ -39,6 +41,13 @@ const AddEditMenuItem = ({ handleAddMenuItem }) => {
     } else {
       handleAddMenuItem(newMenuItem);
 
+      toast(`Uploading ${title} to the database`, {
+        autoClose: 2000,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+      });
+
       setCategory('salads');
       setTitle('');
       setDescription('');
@@ -53,7 +62,7 @@ const AddEditMenuItem = ({ handleAddMenuItem }) => {
   }, [description, textLength]);
 
   return (
-    <div className='AddEditMenuItem mt-4'>
+    <div className='AddEditMenuItem mt-4 mb-4'>
       <form onSubmit={handleMenuItemSubmit} className='mr-1 p-1 radius'>
         <label htmlFor='category' className='mt-1'>
           Select a Category<span className='text-red'>&nbsp;*</span>

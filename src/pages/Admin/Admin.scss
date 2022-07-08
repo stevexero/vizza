@@ -3,7 +3,9 @@
   flex-direction: row;
 
   .add-menu-item {
-    max-width: 300px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
 
     form {
       display: flex;

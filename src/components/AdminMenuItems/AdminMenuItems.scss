@@ -1,8 +1,8 @@
 .AdminMenuItems {
   .AdminMenuItems-items-container {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 2rem;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
 
     .AdminMenuItems-item {
       max-width: 500px;
@@ -12,6 +12,12 @@
       box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
 
       .AdminMenuItems-item-left {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+
         .AdminMenuItems-item-image {
           min-width: 160px;
           max-width: 160px;
@@ -24,18 +30,24 @@
       }
 
       .AdminMenuItems-item-right {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+
         .AdminMenuItems-item-description {
           line-height: 1.4rem;
         }
-
-        .AdminMenuItems-pricing {
-          align-self: flex-end;
-          display: flex;
-          flex-direction: row;
-          align-items: center;
-          justify-content: space-between;
-        }
       }
+    }
+  }
+}
+
+@media screen and (max-width: 1366px) {
+  .AdminMenuItems {
+    .AdminMenuItems-items-container {
+      grid-template-columns: repeat(2, 1fr);
     }
   }
 }

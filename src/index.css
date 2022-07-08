@@ -1,4 +1,4 @@
-@import 'https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400';
+@import 'https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600';
 
 * {
   margin: 0;
@@ -194,6 +194,9 @@ li {
   font-size: 0.8rem;
   border: none;
   background-color: darkseagreen;
+  font-family: 'Source Sans Pro';
+  letter-spacing: 1.2px;
+  font-weight: 600;
 }
 
 .button-delete {
@@ -202,6 +205,20 @@ li {
   font-size: 0.8rem;
   border: none;
   background-color: crimson;
+  font-family: 'Source Sans Pro';
+  letter-spacing: 1.2px;
+  font-weight: 600;
+}
+
+.button-submit {
+  padding: 0.5rem;
+  color: whitesmoke;
+  font-size: 0.8rem;
+  border: none;
+  background-color: slateblue;
+  font-family: 'Source Sans Pro';
+  letter-spacing: 1.2px;
+  font-weight: 600;
 }
 
 /* ==================================================================================== */

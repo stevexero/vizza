@@ -9,4 +9,8 @@
 .ImageUploadPreview .ImageUploadPreview-image-container .ImageUploadPreview-image {
   max-width: 100%;
 }
+
+.ImageUploadPreview label {
+  text-align: center;
+}
 /*# sourceMappingURL=ImageUploadPreview.css.map */

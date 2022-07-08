@@ -5,7 +5,7 @@ const AdminMenuItems = ({ menuItems }) => {
     <div className='AdminMenuItems p-1'>
       <div className='AdminMenuItems-items-container p-1'>
         {menuItems.map((item, index) => (
-          <div className='AdminMenuItems-item p-1' key={index}>
+          <div className='AdminMenuItems-item radius p-1' key={index}>
             <div className='AdminMenuItems-item-left mr-2'>
               <img
                 src={item.imageUrl}

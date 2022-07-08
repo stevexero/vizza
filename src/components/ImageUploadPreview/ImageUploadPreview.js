@@ -1,5 +1,6 @@
 import { useState, useRef, useEffect } from 'react';
 import { v4 as uuidv4 } from 'uuid';
+import ProgressBar from '@ramonak/react-progress-bar';
 
 import FirebaseStorageService from '../../FirebaseStorageService';
 
@@ -65,25 +66,42 @@ const ImageUploadPreview = ({
     handleUploadCancel();
   };
 
+  useEffect(() => {
+    console.log(uploadProgress);
+  }, [uploadProgress]);
+
   return (
     <div className='ImageUploadPreview'>
+      {uploadProgress > -1 ||
+        (imageUrl ? null : (
+          <label
+            className='ImageUploadPreview-edit-image button button-edit button-block mt-2'
+            htmlFor='ImageUploadPreview-edit-image'>
+            Select Image
+          </label>
+        ))}
       <input
+        id='ImageUploadPreview-edit-image'
         type='file'
         accept='image/*'
+        className='mt-1'
         onChange={handleFileChanged}
         ref={fileInputRef}
-        hidden={uploadProgress > -1 || imageUrl}
+        hidden
       />
       {!imageUrl && uploadProgress > -1 ? (
-        <div>
+        <div className='mt-2'>
           <label htmlFor='file'>Upload Progress:</label>
-          <progress id='file' value={uploadProgress} max='100'>
-            {uploadProgress}%
-          </progress>
-          <span>{uploadProgress}%</span>
+          <ProgressBar
+            id='file'
+            completed={uploadProgress}
+            className='mt-1'
+            animateOnRender={true}
+            height='32px'
+            bgColor='dodgerblue'
+          />
         </div>
       ) : null}
-
       {imageUrl ? (
         <div className='ImageUploadPreview-image-container'>
           <img
@@ -94,8 +112,8 @@ const ImageUploadPreview = ({
           <button
             type='button'
             onClick={handleCancelImageClick}
-            className='mt-2'>
-            Cancel image upload
+            className='button button-delete button-block mt-2'>
+            Discard Image
           </button>
         </div>
       ) : null}

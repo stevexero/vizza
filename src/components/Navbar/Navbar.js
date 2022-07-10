@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import { Link as ScrollTo } from 'react-scroll';
-import { BsBag } from 'react-icons/bs';
 
 import './Navbar.css';
 
@@ -59,9 +59,9 @@ const Navbar = () => {
           duration={250}>
           <li className='Navbar-item'>Menu</li>
         </ScrollTo>
-        <li className='Navbar-item'>
-          <BsBag /> 0
-        </li>
+        <Link to='/order-online'>
+          <li className='Navbar-item'>Order Online</li>
+        </Link>
       </ul>
     </nav>
   );

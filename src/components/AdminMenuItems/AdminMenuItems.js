@@ -3,6 +3,15 @@ import './AdminMenuItems.css';
 const AdminMenuItems = ({ menuItems }) => {
   return (
     <div className='AdminMenuItems p-1'>
+      <div className='AdminMenuItems-top-bar m-1'>
+        <div>
+          sort by:{' '}
+          <select name='sort' id='sort'>
+            <option value='category'>Category</option>
+            <option value='newest'>Newest</option>
+          </select>
+        </div>
+      </div>
       <div className='AdminMenuItems-items-container p-1'>
         {menuItems.map((item, index) => (
           <div className='AdminMenuItems-item radius p-1' key={index}>

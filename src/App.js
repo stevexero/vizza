@@ -6,6 +6,7 @@ import FirebaseAuthService from './FirebaseAuthService';
 import FirebaseFirestoreService from './FirebaseFirestoreService';
 
 import Home from './pages/Home/Home';
+import OrderOnline from './pages/OrderOnline/OrderOnline';
 import Admin from './pages/Admin/Admin';
 import NotFound from './pages/NotFound/NotFound';
 
@@ -97,6 +98,7 @@ function App() {
               }
             />
           )}
+          <Route path='/order-online' element={<OrderOnline />} />
         </Routes>
       </BrowserRouter>
       <ToastContainer />

@@ -4,6 +4,7 @@ import {
   GiCakeSlice,
   GiSodaCan,
 } from 'react-icons/gi';
+import { Link } from 'react-router-dom';
 import MenuItems from '../MenuItems/MenuItems';
 
 import './Menu.css';
@@ -41,6 +42,9 @@ const Menu = ({ menuItems }) => {
         heading='Drinks'
         category='drinks'
       />
+      <Link to='/order-online' className='mt-4'>
+        <button className='button button-white-smoke'>Order Online</button>
+      </Link>
     </div>
   );
 };

@@ -5,6 +5,7 @@ import { GiChemicalTank } from 'react-icons/gi';
 import { FaTrashAlt } from 'react-icons/fa';
 
 import './Impact.css';
+import { Link } from 'react-router-dom';
 
 const Impact = () => {
   return (
@@ -53,7 +54,9 @@ const Impact = () => {
           <h5 className='mt-1'>Waste Reduced</h5>
         </div>
       </div>
-      <button className='button button-white-smoke mt-4'>Learn More</button>
+      <Link to='/blog'>
+        <button className='button button-white-smoke mt-4'>Learn More</button>
+      </Link>
     </div>
   );
 };

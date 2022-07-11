@@ -6,6 +6,7 @@ import FirebaseAuthService from './FirebaseAuthService';
 import FirebaseFirestoreService from './FirebaseFirestoreService';
 
 import Home from './pages/Home/Home';
+import Blog from './pages/Blog/Blog';
 import OrderOnline from './pages/OrderOnline/OrderOnline';
 import Admin from './pages/Admin/Admin';
 import NotFound from './pages/NotFound/NotFound';
@@ -62,9 +63,19 @@ function App() {
     }
   };
 
+  const fetchBlogItems = async () => {
+    await console.log('fetching blog');
+  };
+
+  const fetchCustomers = async () => {
+    await console.log('fetching customers');
+  };
+
   useEffect(() => {
     fetchAdminUids();
     fetchMenuItems();
+    fetchBlogItems();
+    fetchCustomers();
   }, [user, fetchAdminUids]);
 
   return (
@@ -91,6 +102,8 @@ function App() {
                     handleAddMenuItem={handleAddMenuItem}
                     fetchMenuItems={fetchMenuItems}
                     menuItems={menuItems}
+                    fetchBlogItems={fetchBlogItems}
+                    fetchCustomers={fetchCustomers}
                   />
                 ) : (
                   <Home menuItems={menuItems} />
@@ -98,6 +111,7 @@ function App() {
               }
             />
           )}
+          <Route path='/blog' element={<Blog />} />
           <Route path='/order-online' element={<OrderOnline />} />
         </Routes>
       </BrowserRouter>

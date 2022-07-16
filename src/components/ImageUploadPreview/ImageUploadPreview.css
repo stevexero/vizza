@@ -2,13 +2,18 @@
   max-width: 100%;
 }
 
-.ImageUploadPreview .ImageUploadPreview-image-container {
+.ImageUploadPreview .ImageUploadPreview-image-container .ImageUploadPreview-image-container-menu {
   max-width: 300px;
 }
 
-.ImageUploadPreview .ImageUploadPreview-image-container .ImageUploadPreview-image {
+.ImageUploadPreview .ImageUploadPreview-image-container .ImageUploadPreview-image-container-menu .ImageUploadPreview-image {
   width: 100%;
   max-width: 100%;
+}
+
+.ImageUploadPreview .ImageUploadPreview-image-container .ImageUploadPreview-image-container-blog {
+  width: 100%;
+  height: 300px;
 }
 
 .ImageUploadPreview label {

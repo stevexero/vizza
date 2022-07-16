@@ -122,6 +122,7 @@ const AddEditMenuItem = ({ handleAddMenuItem }) => {
         />
         {priceError && <p>Enter a valid price</p>}
         <ImageUploadPreview
+          origin='menu'
           basePath='menuitems'
           existingImageUrl={imageUrl}
           handleUploadFinish={(downloadUrl) => setImageUrl(downloadUrl)}

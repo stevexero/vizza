@@ -3,14 +3,17 @@ import { useState } from 'react';
 import AddEditMenuItem from '../../components/AddEditMenuItem/AddEditMenuItem';
 import AddEditBlogArticle from '../../components/AddEditBlogArticle/AddEditBlogArticle';
 import AdminMenuItems from '../../components/AdminMenuItems/AdminMenuItems';
+import AdminBlogItems from '../../components/AdminBlogItems/AdminBlogItems';
 import AdminSidebar from '../../components/AdminSidebar/AdminSidebar';
 
 import './Admin.css';
 
 const Admin = ({
   handleAddMenuItem,
+  handleAddBlogItem,
   fetchMenuItems,
   menuItems,
+  blogItems,
   fetchBlogItems,
   fetchCustomers,
 }) => {
@@ -40,8 +43,12 @@ const Admin = ({
         <div className='view-menu-items'>
           <AdminMenuItems menuItems={menuItems} />
         </div>
+      ) : adminDisplay === 'createblogarticle' ? (
+        <AddEditBlogArticle handleAddBlogItem={handleAddBlogItem} />
       ) : (
-        adminDisplay === 'createblogarticle' && <AddEditBlogArticle />
+        adminDisplay === 'viewblogitems' && (
+          <AdminBlogItems blogItems={blogItems} />
+        )
       )}
     </div>
   );

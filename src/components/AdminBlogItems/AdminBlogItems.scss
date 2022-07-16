@@ -1,0 +1,54 @@
+.AdminBlogItems {
+  .AdminBlogItems-items-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+
+    .AdminBlogItems-item {
+      max-width: 500px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+
+      .AdminBlogItems-item-top {
+        .AdminBlogItems-item-image {
+          width: 100%;
+          height: 100%;
+        }
+      }
+
+      .AdminBlogItems-item-center {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+      }
+
+      .AdminBlogItems-item-bottom {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-end;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1366px) {
+  .AdminBlogItems {
+    .AdminBlogItems-items-container {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+}
+
+@media screen and (max-width: 1080px) {
+  .AdminBlogItems {
+    .AdminBlogItems-items-container {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+}

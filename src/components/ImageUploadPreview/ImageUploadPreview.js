@@ -7,6 +7,7 @@ import FirebaseStorageService from '../../FirebaseStorageService';
 import './ImageUploadPreview.css';
 
 const ImageUploadPreview = ({
+  origin,
   basePath,
   existingImageUrl,
   handleUploadFinish,
@@ -100,11 +101,23 @@ const ImageUploadPreview = ({
       ) : null}
       {imageUrl ? (
         <div className='ImageUploadPreview-image-container'>
-          <img
-            src={imageUrl}
-            alt={imageUrl}
-            className='ImageUploadPreview-image mt-2'
-          />
+          {origin === 'menu' ? (
+            <div className='ImageUploadPreview-image-container-menu'>
+              <img
+                src={imageUrl}
+                alt={imageUrl}
+                className='ImageUploadPreview-image mt-2'
+              />
+            </div>
+          ) : (
+            origin === 'blog' && (
+              <div
+                className='ImageUploadPreview-image-container-blog'
+                style={{
+                  background: `url(${imageUrl}) no-repeat center center/cover`,
+                }}></div>
+            )
+          )}
           <button
             type='button'
             onClick={handleCancelImageClick}

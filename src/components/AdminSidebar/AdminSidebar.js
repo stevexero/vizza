@@ -61,7 +61,7 @@ const AdminSidebar = ({
         transitionTime='100'>
         <div
           className='AdminSidebar-item p-1'
-          onClick={() => adminView('viewblogarticles')}>
+          onClick={() => adminView('viewblogitems')}>
           View Blog Articles
           <MdRefresh onClick={() => fetchBlogItems()} />
         </div>

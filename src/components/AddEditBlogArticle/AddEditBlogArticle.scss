@@ -5,25 +5,25 @@
   form {
     .AddEditBlogArticle-image-container {
       width: 100%;
-      position: relative;
+      // position: relative;
 
       .AddEditBlogArticle-image {
         width: 100%;
         height: 300px;
       }
 
-      .AddEditBlogArticle-image-edit {
-        padding: 1rem;
-        background: slateblue;
-        color: whitesmoke;
-        display: inline-block;
-        border: 4px solid whitesmoke;
-        border-radius: 50%;
-        cursor: pointer;
-        position: absolute;
-        bottom: -0.5rem;
-        right: -0.6rem;
-      }
+      // .AddEditBlogArticle-image-edit {
+      //   padding: 1rem;
+      //   background: slateblue;
+      //   color: whitesmoke;
+      //   display: inline-block;
+      //   border: 4px solid whitesmoke;
+      //   border-radius: 50%;
+      //   cursor: pointer;
+      //   position: absolute;
+      //   bottom: -0.5rem;
+      //   right: -0.6rem;
+      // }
     }
 
     .AddEditBlogArticle-content-container {
@@ -33,12 +33,15 @@
       align-items: flex-start;
 
       input,
-      textarea {
+      .textarea {
         width: 100%;
       }
 
-      textarea {
+      .textarea {
         height: 400px;
+        background-color: whitesmoke;
+        border: none;
+        color: black;
       }
     }
   }

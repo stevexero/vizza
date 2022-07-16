@@ -15,6 +15,7 @@ function App() {
   const [user, setUser] = useState(null);
   const [isAdmin, setIsAdmin] = useState(false);
   const [menuItems, setMenuItems] = useState([]);
+  const [blogItems, setBlogItems] = useState([]);
 
   FirebaseAuthService.subscribeToAuthChanges(setUser);
 
@@ -64,7 +65,32 @@ function App() {
   };
 
   const fetchBlogItems = async () => {
-    await console.log('fetching blog');
+    try {
+      const temp = [];
+
+      const res = await FirebaseFirestoreService.readCollection('blogitems');
+
+      res.forEach((doc) => {
+        temp.push(doc.data());
+      });
+
+      setBlogItems(temp);
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
+  const handleAddBlogItem = async (newBlogItem) => {
+    try {
+      const res = await FirebaseFirestoreService.createDocument(
+        'blogitems',
+        newBlogItem
+      );
+
+      console.log(res.id);
+    } catch (error) {
+      console.log(error);
+    }
   };
 
   const fetchCustomers = async () => {
@@ -100,8 +126,10 @@ function App() {
                 isAdmin ? (
                   <Admin
                     handleAddMenuItem={handleAddMenuItem}
+                    handleAddBlogItem={handleAddBlogItem}
                     fetchMenuItems={fetchMenuItems}
                     menuItems={menuItems}
+                    blogItems={blogItems}
                     fetchBlogItems={fetchBlogItems}
                     fetchCustomers={fetchCustomers}
                   />

@@ -2,11 +2,18 @@
   max-width: 100%;
 
   .ImageUploadPreview-image-container {
-    max-width: 300px;
+    .ImageUploadPreview-image-container-menu {
+      max-width: 300px;
 
-    .ImageUploadPreview-image {
+      .ImageUploadPreview-image {
+        width: 100%;
+        max-width: 100%;
+      }
+    }
+
+    .ImageUploadPreview-image-container-blog {
       width: 100%;
-      max-width: 100%;
+      height: 300px;
     }
   }
 

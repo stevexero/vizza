@@ -37,4 +37,8 @@
   border: none;
   color: black;
 }
+
+.w-md-editor-text-input {
+  -webkit-text-fill-color: black;
+}
 /*# sourceMappingURL=AddEditBlogArticle.css.map */

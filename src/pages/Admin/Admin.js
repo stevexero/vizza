@@ -15,12 +15,13 @@ const Admin = ({
   menuItems,
   blogItems,
   fetchBlogItems,
+  fetchEmployees,
   fetchCustomers,
 }) => {
   const [adminDisplay, setAdminDisplay] = useState('adminhome');
 
-  const adminView = (e) => {
-    setAdminDisplay(e);
+  const adminView = (adminView) => {
+    setAdminDisplay(adminView);
   };
 
   return (
@@ -30,11 +31,26 @@ const Admin = ({
           adminView={adminView}
           fetchMenuItems={fetchMenuItems}
           fetchBlogItems={fetchBlogItems}
+          fetchEmployees={fetchEmployees}
           fetchCustomers={fetchCustomers}
         />
       </div>
       {adminDisplay === 'adminhome' ? (
-        <h1>Vizza Admin Home</h1>
+        <div className='Admin-container'>
+          <h1>Vizza Admin Home</h1>
+          <div className='Admin-card'>
+            <p>
+              {menuItems.length > 0 ? menuItems.length : 0}{' '}
+              {menuItems.length === 1 ? 'menu item' : 'menu items'}
+            </p>
+          </div>
+          <div className='Admin-card'>
+            <p>
+              {blogItems.length > 0 ? blogItems.length : 0}{' '}
+              {blogItems.length === 1 ? 'blog post' : 'blog posts'}
+            </p>
+          </div>
+        </div>
       ) : adminDisplay === 'createmenuitem' ? (
         <div className='add-menu-item'>
           <AddEditMenuItem handleAddMenuItem={handleAddMenuItem} />

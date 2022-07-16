@@ -97,11 +97,16 @@ function App() {
     await console.log('fetching customers');
   };
 
+  const fetchEmployees = async () => {
+    await console.log('fetching employees');
+  };
+
   useEffect(() => {
     fetchAdminUids();
     fetchMenuItems();
     fetchBlogItems();
     fetchCustomers();
+    fetchEmployees();
   }, [user, fetchAdminUids]);
 
   return (
@@ -131,6 +136,7 @@ function App() {
                     menuItems={menuItems}
                     blogItems={blogItems}
                     fetchBlogItems={fetchBlogItems}
+                    fetchEmployees={fetchEmployees}
                     fetchCustomers={fetchCustomers}
                   />
                 ) : (

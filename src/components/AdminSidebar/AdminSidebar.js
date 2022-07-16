@@ -9,6 +9,7 @@ import {
 } from 'react-icons/md';
 import { RiQuillPenFill } from 'react-icons/ri';
 import { BsPersonSquare } from 'react-icons/bs';
+import { FaPersonBooth } from 'react-icons/fa';
 
 import './AdminSidebar.css';
 
@@ -16,6 +17,7 @@ const AdminSidebar = ({
   adminView,
   fetchMenuItems,
   fetchBlogItems,
+  fetchEmployees,
   fetchCustomers,
 }) => {
   const navigate = useNavigate();
@@ -24,7 +26,7 @@ const AdminSidebar = ({
     <div className='AdminSidebar text-white-smoke'>
       <div
         className='AdminSidebar-title-no-collapse p-1'
-        onClick={() => navigate(-1)}>
+        onClick={() => navigate('/')}>
         <MdOutlineArrowBack /> <p className='ml-1'>Back to Site</p>
       </div>
       <div
@@ -42,13 +44,13 @@ const AdminSidebar = ({
         <div
           className='AdminSidebar-item p-1'
           onClick={() => adminView('viewmenuitems')}>
-          View Menu Items
+          - View Menu Items
           <MdRefresh onClick={() => fetchMenuItems()} />
         </div>
         <div
           className='AdminSidebar-item p-1'
           onClick={() => adminView('createmenuitem')}>
-          Create New Menu Item
+          - Create New Menu Item
         </div>
       </Collapsible>
       {/* BLOG */}
@@ -62,13 +64,28 @@ const AdminSidebar = ({
         <div
           className='AdminSidebar-item p-1'
           onClick={() => adminView('viewblogitems')}>
-          View Blog Articles
+          - View Blog Articles
           <MdRefresh onClick={() => fetchBlogItems()} />
         </div>
         <div
           className='AdminSidebar-item p-1'
           onClick={() => adminView('createblogarticle')}>
-          Create New Blog Article
+          - Create New Blog Article
+        </div>
+      </Collapsible>
+      {/* EMPLOYEES */}
+      <Collapsible
+        trigger={
+          <div className='AdminSidebar-title'>
+            <FaPersonBooth /> <p className='ml-1'>Employees</p>
+          </div>
+        }
+        transitionTime='100'>
+        <div
+          className='AdminSidebar-item p-1'
+          onClick={() => adminView('viewemployees')}>
+          - View Employees
+          <MdRefresh onClick={() => fetchEmployees()} />
         </div>
       </Collapsible>
       {/* CUSTOMERS */}
@@ -82,7 +99,7 @@ const AdminSidebar = ({
         <div
           className='AdminSidebar-item p-1'
           onClick={() => adminView('viewcustomers')}>
-          View Customers
+          - View Customers
           <MdRefresh onClick={() => fetchCustomers()} />
         </div>
       </Collapsible>

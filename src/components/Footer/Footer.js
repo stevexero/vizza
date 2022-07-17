@@ -24,9 +24,9 @@ const Footer = ({ existingUser, isAdmin }) => {
           <img src={Map} alt='map' className='Footer-map' />
         </div>
         <div className='Footer-right'>
-          <h2 className='text-white-smoke med-heading'>Vizza Vegan Pizzaria</h2>
+          <h2 className='text-slate-grey med-heading'>Vizza Vegan Pizzaria</h2>
           <div className='Footer-details mt-1'>
-            <div className='Footer-details-left text-white-smoke'>
+            <div className='Footer-details-left text-slate-grey'>
               <h4 className='mt-1'>
                 <BsClockFill />
                 &nbsp;&nbsp;Hours
@@ -46,12 +46,12 @@ const Footer = ({ existingUser, isAdmin }) => {
               <h4 className='mt-1'>
                 <BsCalendar2WeekFill />
                 &nbsp;&nbsp;
-                <Link to='/careers' className='text-white-smoke'>
+                <Link to='/careers' className='text-slate-grey'>
                   Careers
                 </Link>
               </h4>
             </div>
-            <div className='Footer-details-right text-white-smoke ml-2'>
+            <div className='Footer-details-right text-slate-grey ml-2'>
               <h4 className='mt-1'>10:30am - 11:00pm daily</h4>
               <h4 className='mt-1'>
                 975 Seven Hills Dr • Henderson, NV • 89052
@@ -61,7 +61,7 @@ const Footer = ({ existingUser, isAdmin }) => {
               <div style={{ marginTop: '2.25rem' }}></div>
             </div>
           </div>
-          <div className='Footer-social text-white-smoke mt-3'>
+          <div className='Footer-social text-slate-grey mt-3'>
             <span className='social-item mr-2'>
               <BsInstagram size='2rem' />
             </span>
@@ -77,15 +77,15 @@ const Footer = ({ existingUser, isAdmin }) => {
           </div>
         </div>
       </div>
-      <div className='attribution mt-4 text-white-smoke text-center'>
+      <div className='attribution mt-4 text-slate-grey text-center'>
         Site developed by{' '}
-        <a href='https://steve.cx' className='text-white-smoke'>
+        <a href='https://steve.cx' className='text-slate-grey'>
           steve.cx
         </a>
       </div>
       {existingUser && isAdmin && (
         <div className='admin mt-4'>
-          <Link to='/admin' className='text-white-smoke'>
+          <Link to='/admin' className='text-slate-grey'>
             <RiAdminLine size='1.5rem' />
             &nbsp;&nbsp;Admin Panel
           </Link>

@@ -1,14 +1,12 @@
 .Introduction {
   max-width: 1100px;
   padding: 7rem 5rem;
-  background: whitesmoke;
+  background: white;
   display: flex;
   flex-direction: row;
   align-items: center;
-
-  // .Introduction-left {
-
-  // }
+  border: 1px solid #708090aa;
+  border-top: none;
 
   .Introduction-right {
     .Introduction-photo {

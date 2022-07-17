@@ -2,6 +2,7 @@
   width: 1100px;
   padding: 1rem 5rem;
   background: #eeeeee;
+  border: 1px solid #708090aa;
 }
 
 .Navbar .Navbar-container {
@@ -28,7 +29,7 @@
 }
 
 .Navbar .Navbar-container .active {
-  background: whitesmoke;
+  background: white;
   -webkit-transition: 0.2s;
   transition: 0.2s;
 }

@@ -1,7 +1,7 @@
 .Impact {
   max-width: 1100px;
   padding: 7rem 5rem;
-  background: whitesmoke;
+  background: white;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -15,6 +15,7 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  border: 1px solid #708090aa;
 }
 
 .Impact .Impact-subheading {
